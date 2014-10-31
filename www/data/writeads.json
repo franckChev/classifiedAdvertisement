@@ -1,0 +1,16 @@
+[{
+    "title": "Name",
+    "directive": "ads-name"
+}, {
+    "title": "Title",
+    "directive": "ads-title"
+}, {
+    "title": "Content",
+    "directive": "ads-content"
+}, {
+    "title": "Price",
+    "directive": "ads-price"
+}, {
+    "title": "Picture",
+    "directive": "ads-picture"
+}]
