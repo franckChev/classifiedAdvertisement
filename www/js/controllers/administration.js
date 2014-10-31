@@ -1,26 +1,27 @@
-app.controller('AdvertisementsLayoutCtrl', function($scope, $http) {
-    if (localStorage["writeAds"] != undefined) {
-        var data = JSON.parse(localStorage["writeAds"]);
-        $scope.list = data;
-    } else {
-        $http.get('data/writeads.json')
-            .success(function(data, status) {
-                $scope.list = data;
-            })
-            .error(function(data, status) {});
+app.controller('AdvertisementsLayoutCtrl', function($scope, $http, $location, findInLocalStorage, findJsonFile) {
+
+    if (findInLocalStorage != undefined)
+    {
+        $scope.list = findInLocalStorage;
     }
-    $scope.resetLayout = function() {
+    else
+    {
+        $scope.list = findJsonFile.data;
+    }
+
+    $scope.resetLayout = function(mode) {
         $scope.list = [];
-        $http.get('data/writeads.json')
+        $http.get('data/' + mode + 'ads.json')
             .success(function(data, status) {
                 $scope.list = data;
             })
             .error(function(data, status) {});
-        delete localStorage["writeAds"];
+        delete localStorage[mode + "Ads"];
     };
-    $scope.saveLayout = function() {
-        localStorage["writeAds"] = JSON.stringify($scope.list);
+    $scope.saveLayout = function(mode) {
+        localStorage[mode + "Ads"] = JSON.stringify($scope.list);
         alert('Layout Saved !');
+        $location.path('/app/administration');
     }
 });
 

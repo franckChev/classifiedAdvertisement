@@ -1,0 +1,23 @@
+<ion-view title="Mise en page : READ">
+    <ion-content scroll="false">
+        <div ui-tree>
+            <ul ui-tree-nodes="" ng-model="list" class="list">
+                <li ng-repeat="item in list" ui-tree-node class="item item-checkbox">
+                    {{item.title}}
+                </li>
+            </ul>
+        </div>
+        <div class="row row-bottom">
+            <div class="col">
+                <button type="reset" class="button button-positive button-block" ng-click="resetLayout('read')">
+                    Reset
+                </button>
+            </div>
+            <div class="col">
+                <button type="submit" class="button button-positive button-block" ng-click="saveLayout('read')">
+                    Sauvegarder
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

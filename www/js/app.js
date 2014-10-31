@@ -64,12 +64,43 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.tree'])
                 }
             }
         })
-        .state('app.advertisementsLayout', {
-            url: "/advertisementsLayout",
+        .state('app.advertisementsLayoutWrite', {
+            url: "/advertisementsLayoutWrite",
             views: {
                 'menuContent': {
-                    templateUrl: "templates/advertisementsLayout.html",
-                    controller: 'AdvertisementsLayoutCtrl'
+                    templateUrl: "templates/advertisementsLayoutWrite.html",
+                    controller: 'AdvertisementsLayoutCtrl',
+                    resolve: {
+                        findInLocalStorage: function() {
+                            if (localStorage["writeAds"] != undefined) {
+                                var data = JSON.parse(localStorage["writeAds"]);
+                                return data;
+                            }
+                        },
+                        findJsonFile: function($http) {
+                            return $http.get('data/writeads.json');
+                        }
+                    }
+                }
+            }
+        })
+        .state('app.advertisementsLayoutRead', {
+            url: "/advertisementsLayoutRead",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/advertisementsLayoutRead.html",
+                    controller: 'AdvertisementsLayoutCtrl',
+                    resolve: {
+                        findInLocalStorage: function() {
+                            if (localStorage["readAds"] != undefined) {
+                                var data = JSON.parse(localStorage["readAds"]);
+                                return data;
+                            }
+                        },
+                        findJsonFile: function($http) {
+                            return $http.get('data/readads.json');
+                        }
+                    }
                 }
             }
         })
