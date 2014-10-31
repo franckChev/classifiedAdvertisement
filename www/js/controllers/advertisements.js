@@ -83,10 +83,5 @@ app.controller('AddAdvertisementCtrl', function($scope, AdvertisementsFactory, $
                 alert(msg);
             });
         }
-        //AdvertisementsFactory.add($scope.newAdvertisement).then(function() {
-        //    $scope.newAdvertisement = {};
-        //}, function() {
-        //    alert('error add advertisement');
-        //});
     }
 });

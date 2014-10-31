@@ -27,19 +27,6 @@ app.factory('AdvertisementsFactory', ['$http', '$q', function($http, $q) {
                 deferred.reject(msg);
             });
             return deferred.promise;
-        },
-        add: function(advertisement) {
-            var deferred = $q.defer();
-            $http.post("advertisements.json", advertisement)
-                .success(function(data, status) {
-                    alert('Article ajouté !')
-                    deferred.resolve('Success');
-                })
-                .error(function(data, status) {
-                    deferred.reject('Impossible de récupérer les articles');
-                });
-
-            return deferred.promise;
         }
     };
     return factory;
