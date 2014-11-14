@@ -15,8 +15,10 @@
                 <ion-list class="list" ng-repeat="advertisement in advertisements">
                     <ion-item class="item item-thumbnail-left" href="#/app/advertisements/{{advertisement.id}}">
                         <img src="{{adimgpath + advertisement.image}}">
-                        <h2>{{advertisement.ad_headline}}</h2>
-                        <p>{{advertisement.ad_text}}</p>
+                        <ads-field type="text" name="{{advertisement.ad_headline}}" mode="mode">
+                        </ads-field>
+                        <ads-field type="text" name="{{advertisement.ad_text}}" mode="mode">
+                        </ads-field>
                     </ion-item>
                 </ion-list>
             </div>
