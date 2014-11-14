@@ -9,25 +9,44 @@
     <ion-side-menu side="left">
         <header class="bar bar-header bar-stable">
         </header>
-        <ion-content class="has-header" scroll="false">
+        <ion-content class="has-header" scroll="true">
+            <!--            <ion-list>
+                <ion-item nav-clear menu-close href="#/app/accueil" class="item item-avatar" ng-repeat="category in categories">
+                   <img src="{{catimgpath + category.image}}" style="background-color:#0C83C7">
+                    {{category.name}}
+                </ion-item>
+            </ion-list> -->
             <ion-list>
                 <ion-item nav-clear menu-close href="#/app/accueil" class="item-icon-left">
                     <i class="icon ion-home"></i>
                     Accueil
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/advertisements" class="item-icon-left">
+                <ion-item nav-clear menu-close href="#/app/search" class="item-icon-left">
+                    <i class="icon ion-search"></i>
+                    Rechercher
+                </ion-item>
+               <!--  <ion-item nav-clear menu-close href="#/app/advertisements" class="item-icon-left">
                     <i class="icon ion-clipboard"></i>
                     Annonces
+                </ion-item> -->
+                <ion-item nav-clear menu-close href="#/app/favourites" class="item-icon-left">
+                    <i class="icon ion-star"></i>
+                    Contenus favoris
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/categories" class="item-icon-left">
+                <!--                 <ion-item nav-clear menu-close href="#/app/categories" class="item-icon-left">
                     <i class="icon ion-grid"></i>
                     Catégories
                 </ion-item>
-                <ion-item nav-clear menu-close href="#/app/administration" class="item-icon-left">
+ -->
+                <ion-item nav-clear menu-close href="#/app/administration" class="item-icon-left" ng-show="isAdmin">
                     <i class="icon ion-settings"></i>
                     Administration
                 </ion-item>
-                 <ion-item nav-clear menu-close href="#/app/terms" class="item-icon-left">
+                <ion-item nav-clear menu-close href="#/app/authentification" class="item-icon-left">
+                    <i class="icon ion-locked"></i>
+                    Se connecter
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/app/terms" class="item-icon-left">
                     <i class="icon ion-alert"></i>
                     Conditions Générales
                 </ion-item>

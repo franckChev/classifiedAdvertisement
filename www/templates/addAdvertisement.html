@@ -1,9 +1,14 @@
 <ion-view title="Ajouter une annonce">
-    <ion-content scroll="false">
+    <ion-content scroll="true">
         <form ng-submit="addAdvertisement()">
-            <div class="list">
-            <ads-container mode="write">
-            </ads-container>
+            <!--             <div class="list">
+                <ads-container mode="write">
+                </ads-container>
+            </div>
+ -->
+            <div class="list" ng-repeat="field in fields">
+                <ads-field type="{{field.type}}" name="{{field.name}}" title="{{field.title}}" mode="mode" object="newAdvertisement" values="field.values">
+                </ads-field>
             </div>
             <div class="row">
                 <div class="col">

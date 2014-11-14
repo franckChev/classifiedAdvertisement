@@ -1,0 +1,527 @@
+{
+    "configuration": {
+        "name": "PSDemo",
+        "ads_per_page": "20",
+        "catimgpath": "http://fontromeu-application.com//images/com_adsmanager/categories/",
+        "adimgpath": "http://fontromeu-application.com//images/com_adsmanager/ads/",
+        "fieldimgpath": "http://fontromeu-application.com//images/com_adsmanager/fields/"
+    },
+    "categories": [
+        {
+            "name": "Météo",
+            "id": "2",
+            "image": "menu_meteo@2x.png",
+            "list": []
+        },
+        {
+            "name": "Où trouver ?",
+            "id": "9",
+            "image": "menu_trouver@2x.png",
+            "list": [
+                {
+                    "name": "Dormir / Résider",
+                    "id": "15",
+                    "image": "15cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Se restaurer",
+                    "id": "16",
+                    "image": "16cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Sortir",
+                    "id": "17",
+                    "image": "17cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "A visiter",
+                    "id": "18",
+                    "image": "18cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Activités",
+                    "id": "19",
+                    "image": "19cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Commerces",
+                    "id": "20",
+                    "image": "20cat.jpg",
+                    "list": []
+                }
+            ]
+        },
+        {
+            "name": "Infos pratiques",
+            "id": "10",
+            "image": "menu_infos@2x.png",
+            "list": [
+                {
+                    "name": "Santé",
+                    "id": "21",
+                    "image": "21cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Office du tourisme",
+                    "id": "22",
+                    "image": "22cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Mairie",
+                    "id": "23",
+                    "image": "23cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Transports",
+                    "id": "24",
+                    "image": "24cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Urgences",
+                    "id": "25",
+                    "image": "25cat.jpg",
+                    "list": []
+                }
+            ]
+        },
+        {
+            "name": "Domaines skiables",
+            "id": "11",
+            "image": "menu_ski@2x.png",
+            "list": [
+                {
+                    "name": "Forfaits",
+                    "id": "31",
+                    "image": "31cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Espace ludique",
+                    "id": "35",
+                    "image": "35cat.jpg",
+                    "list": []
+                },
+                {
+                    "name": "Snowpark",
+                    "id": "36",
+                    "image": "36cat.jpg",
+                    "list": []
+                }
+            ]
+        },
+        {
+            "name": "Evenements",
+            "id": "12",
+            "image": "menu_evenements@2x.png",
+            "list": []
+        },
+        {
+            "name": "Webcam",
+            "id": "13",
+            "image": "menu_webcam@2x.png",
+            "list": []
+        },
+        {
+            "name": "Bulletin neige",
+            "id": "30",
+            "image": "menu_bulletin_neige@2x.png",
+            "list": []
+        },
+        {
+            "name": "Rapports de réunion",
+            "id": "32",
+            "image": "icone_rapport_small@2x.png",
+            "list": []
+        },
+        {
+            "name": "Ecogeste",
+            "id": "37",
+            "image": "37cat.jpg",
+            "list": []
+        }
+    ],
+    "fields": [
+        {
+            "id": "5",
+            "name": "ad_headline",
+            "title": "Titre",
+            "type": "text",
+            "searchable": "1",
+            "sort": "0",
+            "catsid": ",-1,"
+        },
+        {
+            "id": "41",
+            "name": "ad_headlineen",
+            "title": "Titre Anglais",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",-1,"
+        },
+        {
+            "id": "42",
+            "name": "ad_headlinees",
+            "title": "Titre Catalan",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",-1,"
+        },
+        {
+            "id": "34",
+            "name": "ad_datemin",
+            "title": "datemin",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",12,"
+        },
+        {
+            "id": "35",
+            "name": "ad_datemax",
+            "title": "datemax",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",12,"
+        },
+        {
+            "id": "39",
+            "name": "ad_longday",
+            "title": "longday",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "36",
+            "name": "ad_heuremin",
+            "title": "heuremin",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",12,"
+        },
+        {
+            "id": "46",
+            "name": "ad_bulletinen",
+            "title": "ad_bulletinen",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "33",
+            "name": "ad_key",
+            "title": "ad_key",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",-1,"
+        },
+        {
+            "id": "37",
+            "name": "ad_heuremax",
+            "title": "heuremax",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",12,"
+        },
+        {
+            "id": "38",
+            "name": "ad_lieu",
+            "title": "lieu",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",12,"
+        },
+        {
+            "id": "40",
+            "name": "ad_shortday",
+            "title": "shortday",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "45",
+            "name": "ad_bulletinfr",
+            "title": "ad_bulletin_fr",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "47",
+            "name": "ad_bulletines",
+            "title": "ad_bulletines",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "48",
+            "name": "ad_classement",
+            "title": "Classement",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",9,15,16,17,18,19,20,10,21,22,23,24,25,"
+        },
+        {
+            "id": "49",
+            "name": "ad_totalpistes",
+            "title": "ad_totalpistes",
+            "type": "number",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",30,"
+        },
+        {
+            "id": "50",
+            "name": "ad_pistesouvertes",
+            "title": "ad_pistesouvertes",
+            "type": "number",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",30,"
+        },
+        {
+            "id": "6",
+            "name": "ad_text",
+            "title": "Description",
+            "type": "textarea",
+            "searchable": "1",
+            "sort": "0",
+            "catsid": ",9,15,16,17,18,19,20,10,21,22,23,24,25,31,12,32,"
+        },
+        {
+            "id": "43",
+            "name": "ad_texten",
+            "title": "Description Anglais",
+            "type": "textarea",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",9,15,16,17,18,19,20,10,21,22,23,24,25,31,12,32,"
+        },
+        {
+            "id": "44",
+            "name": "ad_textes",
+            "title": "Description Catalan",
+            "type": "textarea",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",9,15,16,17,18,19,20,10,21,22,23,24,25,31,12,32,"
+        },
+        {
+            "id": "7",
+            "name": "ad_phone",
+            "title": "Téléphone",
+            "type": "number",
+            "searchable": "1",
+            "sort": "0",
+            "catsid": ",1,9,15,16,17,18,19,20,10,21,22,23,24,25,"
+        },
+        {
+            "id": "2",
+            "name": "email",
+            "title": "Email",
+            "type": "emailaddress",
+            "searchable": "1",
+            "sort": "0",
+            "catsid": ",9,15,16,17,18,19,20,10,21,22,23,24,25,"
+        },
+        {
+            "id": "17",
+            "name": "ad_url",
+            "title": "URL",
+            "type": "url",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",9,15,16,17,18,19,20,10,21,22,23,24,25,31,"
+        },
+        {
+            "id": "4",
+            "name": "ad_zip",
+            "title": "Code Postal",
+            "type": "text",
+            "searchable": "1",
+            "sort": "0",
+            "catsid": ",1,9,15,16,17,18,19,20,10,21,22,23,24,25,12,"
+        },
+        {
+            "id": "13",
+            "name": "ad_adresse",
+            "title": "Adresse",
+            "type": "textarea",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",1,9,15,16,17,18,19,20,10,21,22,23,24,25,12,"
+        },
+        {
+            "id": "3",
+            "name": "ad_city",
+            "title": "Ville",
+            "type": "text",
+            "searchable": "1",
+            "sort": "1",
+            "catsid": ",1,9,15,16,17,18,19,20,10,21,22,23,24,25,12,"
+        },
+        {
+            "id": "18",
+            "name": "ad_position",
+            "title": "position",
+            "type": "gmap",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",1,9,15,16,17,18,19,20,10,21,22,23,24,25,12,"
+        },
+        {
+            "id": "19",
+            "name": "ad_etoile",
+            "title": "Etoile",
+            "type": "select",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",15,16,",
+            "values": [
+                {
+                    "title": "1 Etoile",
+                    "value": "1"
+                },
+                {
+                    "title": "2 Etoiles",
+                    "value": "2"
+                },
+                {
+                    "title": "3 Etoiles",
+                    "value": "3"
+                },
+                {
+                    "title": "4 Etoiles",
+                    "value": "4"
+                },
+                {
+                    "title": "5 Etoiles",
+                    "value": "5"
+                }
+            ]
+        },
+        {
+            "id": "20",
+            "name": "ad_imgwebcam",
+            "title": "imgwebcam",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",13,"
+        },
+        {
+            "id": "32",
+            "name": "ad_neigebasneige",
+            "title": "ad_neigebasneige",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",30,"
+        },
+        {
+            "id": "31",
+            "name": "ad_neigebasalt",
+            "title": "ad_neigebasalt",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",30,"
+        },
+        {
+            "id": "30",
+            "name": "ad_neigehautneige",
+            "title": "ad_neigehautneige",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",30,"
+        },
+        {
+            "id": "29",
+            "name": "ad_neigehautalt",
+            "title": "neigehautalt",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",30,"
+        },
+        {
+            "id": "27",
+            "name": "ad_tempmax",
+            "title": "tempmax",
+            "type": "number",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "26",
+            "name": "ad_tempmin",
+            "title": "tempmin",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "25",
+            "name": "ad_temp",
+            "title": "temp",
+            "type": "number",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,"
+        },
+        {
+            "id": "24",
+            "name": "ad_weather",
+            "title": "weather",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,30,"
+        },
+        {
+            "id": "23",
+            "name": "ad_neige",
+            "title": "neige",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",2,30,"
+        },
+        {
+            "id": "22",
+            "name": "ad_altitude",
+            "title": "altitude",
+            "type": "text",
+            "searchable": "0",
+            "sort": "0",
+            "catsid": ",13,"
+        }
+    ]
+}

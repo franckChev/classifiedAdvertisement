@@ -1,4 +1,5 @@
 app.controller('AdvertisementsCtrl', function($scope, $location, AdvertisementsFactory, $ionicLoading) {
+    $scope.adimgpath = "http://fontromeu-application.com//images/com_adsmanager/ads/";
     if (localStorage["advertisements"] != undefined) {
         $scope.advertisements = JSON.parse(localStorage["advertisements"]);
     } else {
@@ -42,8 +43,12 @@ app.controller('AdvertisementCtrl', function($scope, AdvertisementsFactory, $sta
 });
 
 app.controller('AddAdvertisementCtrl', function($scope, AdvertisementsFactory, $stateParams, $http, $state, $ionicViewService) {
+
+    $scope.mode = "edit";
+
     $scope.list = [];
     $scope.newAdvertisement = {};
+    $scope.fields = [];
 
     if (localStorage["writeAds"] != undefined) {
         var data = JSON.parse(localStorage["writeAds"]);
@@ -56,7 +61,23 @@ app.controller('AddAdvertisementCtrl', function($scope, AdvertisementsFactory, $
             .error(function(data, status) {});
     }
 
+    $http.get('data/configuration.json')
+        .success(function(data, status) {
+            angular.forEach(data.fields, function(value, key) {
+                var categories = value.catsid.split(',');
+                for (var i = 0; i < categories.length; i++) {
+                    if (categories[i] == $stateParams.id) {
+                        $scope.fields.push(value);
+                        break;
+                    }
+                }
+            });
+        })
+        .error(function(data, status) {});
+
+
     $scope.addAdvertisement = function() {
+        console.log($scope.newAdvertisement);
         $scope.newAdvertisement._id = app.guid();
         var data;
 

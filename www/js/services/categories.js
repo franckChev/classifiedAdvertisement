@@ -3,9 +3,9 @@ app.factory('CategoriesFactory', ['$http', '$q', function($http, $q) {
         categories: false,
         getCategories: function() {
             var deferred = $q.defer();
-            $http.get('data/categories.json')
+            $http.get('data/configuration.json')
                 .success(function(data, status) {
-                    factory.categories = data;
+                    factory.categories = data.categories;
                     deferred.resolve(factory.categories);
                 })
                 .error(function(data, status) {

@@ -10,7 +10,7 @@ app.directive('adsName', ['$compile', '$http', '$templateCache', function($compi
     };
     return {
         restrict: 'E',
-        replace:true,
+        replace: true,
         templateUrl: function(elem, attrs) {
             return (getTemplateUrl(elem[0].parentNode.attributes.mode.value));
         },
@@ -42,7 +42,7 @@ app.directive('adsPicture', ['$compile', '$http', '$templateCache', function($co
     };
     return {
         restrict: 'E',
-        replace:true,
+        replace: true,
         templateUrl: function(elem, attrs) {
             return (getTemplateUrl(elem[0].parentNode.attributes.mode.value));
         },
@@ -74,7 +74,7 @@ app.directive('adsContent', ['$compile', '$http', '$templateCache', function($co
     };
     return {
         restrict: 'E',
-        replace:true,
+        replace: true,
         templateUrl: function(elem, attrs) {
             return (getTemplateUrl(elem[0].parentNode.attributes.mode.value));
         },
@@ -100,12 +100,41 @@ app.directive('adsContainer', ['$compile', '$http', '$templateCache', function($
         link: function postLink(scope, iElement, iAttrs) {
             scope.$watch('list', function(val) {
                 var dom = "";
-                angular.forEach(val, function(value)
-                {
-                    dom += '<' + value.directive + '>' + ' ' + '</' + value.directive + '>'; 
+                angular.forEach(val, function(value) {
+                    dom += '<' + value.directive + '>' + ' ' + '</' + value.directive + '>';
                 });
                 iElement.html(dom);
                 $compile(iElement.contents())(scope);
+            });
+        }
+    };
+}]);
+
+app.directive('adsField', ['$compile', '$http', '$templateCache', function($compile, $http, $templateCache) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope: {
+            mode: '=',
+            name: '@',
+            title: '@',
+            object: '=',
+            list: '=values'
+        },
+        link: function(scope, iElement, iAttrs) {
+            loader = $http.get("type/" + iAttrs.type + "/" + scope.mode + ".html", {
+                cache: $templateCache
+            });
+            var promise = loader.success(function(html) {
+                // If field directive attributes contain an object, 
+                //ng-model in the template will be binding with this object  
+                if (scope.object != undefined) {
+                    iElement.html(html.replace('value', 'object.' + iAttrs.name));
+                } else {
+                    iElement.html(html);
+                }
+            }).then(function(response) {
+                iElement.replaceWith($compile(iElement.html())(scope));
             });
         }
     };

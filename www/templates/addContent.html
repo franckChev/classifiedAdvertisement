@@ -1,0 +1,15 @@
+<ion-view title="Ajouter du contenu">
+    <ion-content scroll="true" padding="true">
+        <form ng-submit="addAdvertisement()">
+            <div class="list" ng-repeat="field in fields">
+                <ads-field type="{{field.type}}" name="{{field.name}}" title="{{field.title}}" mode="mode" object="newAdvertisement" values="field.values">
+                </ads-field>
+            </div>
+            <div>
+                <button type="submit" class="button button-block button-positive">
+                    Valider
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -27,6 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.tree'])
             url: "/app",
             abstract: true,
             templateUrl: "templates/menu.html",
+            controller: "MenuCtrl"
         })
         .state('app.home', {
             url: "/home",
@@ -34,6 +35,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.tree'])
                 'menuContent': {
                     templateUrl: "templates/home.html",
                     controller: "HomeCtrl"
+                }
+            }
+        })
+        .state('app.favourites', {
+            url: "/favourites",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/favourites.html",
+                    controller: "FavouritesCtrl"
                 }
             }
         })
@@ -55,12 +65,37 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.tree'])
                 }
             }
         })
+        .state('app.addContent', {
+            url: "/addContent/:id",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/addContent.html",
+                    controller: 'AddAdvertisementCtrl'
+                }
+            }
+        })
         .state('app.administration', {
             url: "/administration",
             views: {
                 'menuContent': {
                     templateUrl: "templates/administration.html",
                     controller: 'AdministrationCtrl'
+                }
+            }
+        })
+        .state('app.authentification', {
+            url: "/authentification",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/authentification.html"
+                }
+            }
+        })
+        .state('app.signup', {
+            url: "/signup",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/signup.html"
                 }
             }
         })
@@ -118,6 +153,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ui.tree'])
                 'menuContent': {
                     templateUrl: "templates/addAdvertisement.html",
                     controller: "AddAdvertisementCtrl"
+                }
+            }
+        })
+        .state('app.search', {
+            url: "/search",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/search.html"
+                }
+            }
+        })
+        .state('app.categoriesById', {
+            url: "/categories/:id",
+            views: {
+                'menuContent': {
+                    templateUrl: "templates/categories.html",
+                    controller: 'CategoriesCtrl'
                 }
             }
         })

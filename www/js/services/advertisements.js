@@ -3,7 +3,7 @@ app.factory('AdvertisementsFactory', ['$http', '$q', function($http, $q) {
         advertisements: false,
         getAdvertisements: function() {
             var deferred = $q.defer();
-            $http.get('data/advertisements.json')
+            $http.get('data/advertisementsfontromeulight.json')
                 .success(function(data, status) {
                     factory.advertisements = data;
                     deferred.resolve(factory.advertisements);
