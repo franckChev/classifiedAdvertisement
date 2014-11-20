@@ -14,6 +14,8 @@ app.controller('AdvertisementsCtrl', function($scope, $location, AdvertisementsF
 app.controller('AdvertisementCtrl', function($scope, AdvertisementsFactory, $stateParams, $http) {
 
     $scope.list = [];
+    $scope.mode = "details";
+    $scope.adimgpath = "http://fontromeu-application.com//images/com_adsmanager/ads/";
 
     if (localStorage["readAds"] != undefined) {
         var data = JSON.parse(localStorage["readAds"]);
@@ -29,7 +31,7 @@ app.controller('AdvertisementCtrl', function($scope, AdvertisementsFactory, $sta
     if (localStorage["advertisements"] != undefined) {
         var data = JSON.parse(localStorage["advertisements"]);
         angular.forEach(data, function(value, key) {
-            if (value._id == $stateParams.id) {
+            if (value.id == $stateParams.id) {
                 $scope.advertisement = value;
             }
         });
@@ -78,7 +80,7 @@ app.controller('AddAdvertisementCtrl', function($scope, AdvertisementsFactory, $
 
     $scope.addAdvertisement = function() {
         console.log($scope.newAdvertisement);
-        $scope.newAdvertisement._id = app.guid();
+        $scope.newAdvertisement.id = app.guid();
         var data;
 
         if (localStorage["advertisements"] != undefined) {

@@ -1,8 +1,9 @@
-<ion-view title="{{advertisement.title[0]}}">
-    <ion-content>
-        <div class="item item-body">
-            <ads-container mode="read">
-            </ads-container>
-        </div>
+<ion-view title="{{advertisement.ad_headline}}">
+    <ion-content scroll="false">
+        <ads-field type="text" name="{{advertisement.ad_headline}}" mode="mode">
+        </ads-field>
+        <img src="{{adimgpath + advertisement.image}}">
+         <ads-field type="text" name="{{advertisement.ad_text}}" mode="mode">
+        </ads-field>
     </ion-content>
 </ion-view>

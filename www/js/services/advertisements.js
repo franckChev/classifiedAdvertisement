@@ -18,7 +18,7 @@ app.factory('AdvertisementsFactory', ['$http', '$q', function($http, $q) {
             var advertisement = {};
             var advertisements = factory.getAdvertisements().then(function(advertisements) {
                 angular.forEach(advertisements, function(value, key) {
-                    if (value._id == id) {
+                    if (value.id == id) {
                         advertisement = value;
                     }
                 });

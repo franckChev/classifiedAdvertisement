@@ -118,8 +118,7 @@ app.directive('adsField', ['$compile', '$http', '$templateCache', function($comp
             mode: '=',
             name: '@',
             title: '@',
-            object: '=',
-            list: '=values'
+            object: '='
         },
         link: function(scope, iElement, iAttrs) {
             loader = $http.get("type/" + iAttrs.type + "/" + scope.mode + ".html", {

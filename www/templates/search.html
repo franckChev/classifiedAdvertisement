@@ -3,6 +3,21 @@
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
     </ion-nav-buttons>
     <ion-content>
-
+        <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <ads-field type="text" name="ad_headline" title="Titre du contenu" mode="mode" object="advertisementToFind">
+                </ads-field>
+            </label>
+        </div>
+        <ion-list class="list" ng-repeat="advertisement in advertisements | filter:advertisementToFind.ad_headline">
+            <ion-item class="item item-thumbnail-left" href="#/app/advertisements/{{advertisement.id}}">
+                <img src="{{adimgpath + advertisement.image}}">
+                <ads-field type="text" name="{{advertisement.ad_headline}}" mode="mode2">
+                </ads-field>
+                <ads-field type="text" name="{{advertisement.ad_text}}" mode="mode2">
+                </ads-field>
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

@@ -7,15 +7,14 @@
             </div>
  -->
             <div class="list" ng-repeat="field in fields">
-                <ads-field type="{{field.type}}" name="{{field.name}}" title="{{field.title}}" mode="mode" object="newAdvertisement" values="field.values">
+                <ads-field type="{{field.type}}" name="{{field.name}}" title="{{field.title}}" mode="mode" object="newAdvertisement">
                 </ads-field>
             </div>
             <div class="row">
-                <div class="col">
-                    <button type="submit" class="button button-block button-positive">
-                        Valider
-                    </button>
-                </div>
+                <button type="submit" class="button button-block button-positive">
+                    Valider
+                </button>
+            </div>
             </div>
         </form>
     </ion-content>
